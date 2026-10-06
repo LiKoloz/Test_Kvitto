@@ -4,7 +4,7 @@ from repository.Engine import get_session
 from models.Payment import Payment
 
 
-async def add_payment(payment):
+async def add(payment):
     session = get_session()
     try:
         session.add(payment)
@@ -14,7 +14,7 @@ async def add_payment(payment):
         return False
     return True
 
-async def get_all_payment(id):
+async def get(id):
     session = get_session()
     result = await session.execute(select(Payment).where(Payment.id == id))
     return result.scalar_one_or_none()
