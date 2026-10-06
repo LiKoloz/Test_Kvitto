@@ -9,5 +9,4 @@ class Bank_Status(Base):
 
     id = Column(BigInteger, primary_key=True, autoincrement=True)
     payment_id = Column(BigInteger, ForeignKey("payments.id"))
-    payment = relationship("Payment", back_populates="bank_statuses")
     created_at = Column(DateTime, nullable=False, server_default=func.now())

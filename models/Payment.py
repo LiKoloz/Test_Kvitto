@@ -13,9 +13,8 @@ class Payment(Base):
     method = Column(String, nullable=False)
     installment_months = Column(SmallInteger)
     promo_code = Column(String)
-    schedule = Column(BigInteger, nullable=False)
+    schedule = Column(BigInteger)
     tariff_id = Column(BigInteger, ForeignKey("tariffs.id"))
-    tarrif = relationship("Tariff", back_populates="payments")
     created_at = Column(DateTime, nullable=False, server_default=func.now())
 
     __table_args__ = (

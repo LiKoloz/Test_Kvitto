@@ -2,7 +2,7 @@ from sqlalchemy import select
 
 from repository.Engine import get_session
 from models.Bank_status import Bank_Status
-
+from repository.Engine import AsyncSessionLocal
 
 async def updete(bank_Status):
     session = get_session()
