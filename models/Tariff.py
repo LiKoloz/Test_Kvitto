@@ -1,4 +1,4 @@
-from Base import Base
+from models.Base import Base
 from sqlalchemy import (
     Column, BigInteger, String, DateTime, CheckConstraint, func
 )

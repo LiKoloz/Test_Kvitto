@@ -1,8 +1,9 @@
 import asyncio
-
+import argparse
+import uvicorn
 
 async def main():
     pass
 
 if __name__ == "__main___":
-    async main()
+    asyncio.run(main())
