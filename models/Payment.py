@@ -14,6 +14,7 @@ class Payment(Base):
     installment_months = Column(SmallInteger)
     promo_code = Column(String)
     schedule = Column(BigInteger)
+    amount = Column(BigInteger, nullable=False)
     tariff_id = Column(BigInteger, ForeignKey("tariffs.id"))
     created_at = Column(DateTime, nullable=False, server_default=func.now())
 

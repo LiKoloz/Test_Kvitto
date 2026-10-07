@@ -13,3 +13,8 @@ async def get():
             print(">>> REAL ERROR:", repr(e))
             traceback.print_exc()
             raise
+
+async def get_by_id(id):
+    async with AsyncSessionLocal() as session:
+        result = await session.execute(select(Tariff).where(Tariff.id == id))
+        return result.scalar_one_or_none()
