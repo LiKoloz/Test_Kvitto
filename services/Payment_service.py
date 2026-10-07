@@ -12,5 +12,5 @@ async def add_payment(payment: Payment):
             payment.amount = payment.amount * 90 // 100
     return await rep.add(payment)
 
-async def get_payment(id):
+async def get_payment(id: int):
     return await rep.get(id)

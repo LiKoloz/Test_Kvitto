@@ -14,7 +14,7 @@ async def get():
             traceback.print_exc()
             raise
 
-async def get_by_id(id):
+async def get_by_id(id: int):
     async with AsyncSessionLocal() as session:
         result = await session.execute(select(Tariff).where(Tariff.id == id))
         return result.scalar_one_or_none()
