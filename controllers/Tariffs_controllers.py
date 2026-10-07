@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-import services.Tarrif_service as serv
+import services.Tariff_service as serv
 from fastapi.encoders import jsonable_encoder
 
 from fastapi.responses import JSONResponse
